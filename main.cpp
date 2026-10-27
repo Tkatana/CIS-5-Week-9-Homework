@@ -2,13 +2,14 @@
 #include <string>
 
 using std::cout;
+using std::cin;
 
 // Homework 9 — Tyler Quintana
 // CIS 5 Week 09 · Menu on the lab
 // Paste your lab functions here, or fill the TODOs.
 
 void printMenu() {
-  std::cout << "1) Average  2) High  3) Quit\n";
+  cout << "1) Average  2) High  3) Quit\n";
 }
 
 double average(const int a[], int n){
@@ -39,13 +40,13 @@ int main() {
 
   do {
     printMenu();
-    std::cin >> choice;
+    cin >> choice;
     if (choice == 1) {
       double avg = average(scores, N);
       printsummary(avg);
     } else if (choice == 2) {
       int top = high(scores, N);
-      std::cout << "High: " << top << "\n";
+      cout << "High: " << top << "\n";
     }
   } while (choice != 3);
 
